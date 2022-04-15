@@ -9,7 +9,7 @@
 resource "aws_iam_role" "codepipeline_role" {
   assume_role_policy = <<EOF
 {
-  "Version": "2022-04-15",
+  "Version": "2012-10-17",
   "Statement": [
     {
       "Action": "sts:AssumeRole",
@@ -28,7 +28,7 @@ resource "aws_iam_policy" "codepipeline_policy" {
   description = "Policy to allow codepipeline to execute"
   policy      = <<EOF
 {
-  "Version": "2022-04-15",
+  "Version": "2012-10-17",
   "Statement": [
     {
       "Action": [

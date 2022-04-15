@@ -9,7 +9,7 @@ data "aws_caller_identity" "current" {}
 resource "aws_iam_role" "codebuild_role" {
   assume_role_policy = <<EOF
 {
-  "Version": "2022-04-15",
+  "Version": "2012-10-17",
   "Statement": [
     {
       "Action": "sts:AssumeRole",
@@ -28,7 +28,7 @@ resource "aws_iam_policy" "codebuild_policy" {
   description = "Policy to allow codebuild to execute build spec"
   policy = <<EOF
 {
-  "Version": "2022-04-15",
+  "Version": "2012-10-17",
   "Statement": [
     {
       "Action": [

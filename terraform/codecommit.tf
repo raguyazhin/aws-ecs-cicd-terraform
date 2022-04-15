@@ -16,7 +16,7 @@ resource "aws_codecommit_repository" "source_repo" {
 resource "aws_iam_role" "trigger_role" {
   assume_role_policy = <<EOF
 {
-  "Version": "2022-04-15",
+  "Version": "2012-10-17",
   "Statement": [
     {
       "Action": "sts:AssumeRole",
@@ -36,7 +36,7 @@ resource "aws_iam_policy" "trigger_policy" {
   description = "Policy to allow rule to invoke pipeline"
   policy      = <<EOF
 {
-  "Version": "2022-04-15",
+  "Version": "2012-10-17",
   "Statement": [
     {
       "Action": [
